@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example7</title>
+</head>
+<body>
+    <script>
+        var movie = [
+            {
+                title: "Batman",
+                rating: "4.7 stars",
+                hasWatched: true
+            },
+            {
+                title: "Spiderman",
+                rating: "4.2 stars",
+                hasWatched: false
+            },
+            {
+                title: "Men in Black",
+                rating: "4.1 stars",
+                hasWatched: false
+            },
+            {
+                title: "The Purge",
+                rating: "4.0 stars",
+                hasWatched: true
+            }
+        ]
+        
+        for(i = 0; i < movie.length; i++) {
+            if (movie[i].hasWatched === true) {
+                console.log("You have watched " + movie[i].title + " - " + movie[i].rating);
+            }
+            else {
+                console.log("You have not watched " + movie[i].title + " - " + movie[i].rating);
+            }
+        }
+        movie.forEach(function(mo){
+            if (mo.hasWatched === true) {
+                console.log("You have watched " + mo.title + " - " + mo.rating);
+            }
+            else {
+                console.log("You have not watched " + mo.title + " - " + mo.rating);
+            }
+        });
+    </script>
+</body>
+</html>

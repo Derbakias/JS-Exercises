@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // check if the number is even
+        function isEven(num) {
+            if (num % 2 === 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        } 
+        // get the factorial of number
+        function factorial(num) {
+            var result = 1
+            for (i=2; i <= num; i++) {
+                result *= i;
+            }
+            return result; 
+        }
+        // convert a kebab string to snakecase
+        function kebabToSnake(myString){
+            var res = "";
+            for (var i = 0; i < myString.length; i++){
+                if (myString[i] !== "-"){
+                    res = res + myString[i];
+                }
+                else {
+                    res = res + "_"
+                }
+            }
+            return res;
+        }
+        
+        // print out everything on the screen
+        console.log(isEven(4));
+        console.log(isEven(21));
+        console.log(factorial(4));
+        console.log(kebabToSnake("my-kebap-string"));
+    </script>
+</body>
+</html>

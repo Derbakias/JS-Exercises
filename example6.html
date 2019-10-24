@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example6</title>
+</head>
+<body>
+    <script>
+        // prints out the elements of the array in reverse order
+        function printReverse(nums){
+            for(var i = nums.length; i--;) {
+                console.log(nums[i])
+            }
+        }
+        printReverse(["a", "b", "c", "d"]);
+
+        // find if all the elements are identical
+        function isUniform(nums) {
+            var first = nums[0];
+            for(var i = 1; i < nums.length; i++) {
+                if (nums[i] !== first){
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log("It's Unique: " + isUniform([1,1,1,1,1]));
+        console.log("It's Unique: " + isUniform(["a","a","b","a"]));
+
+        // return the sum of all the numbers
+        function sumArray(nums) {
+            var total = nums[0];
+            for(var i = 1; i < nums.length; i++) {
+                total = total + nums[i];
+            }
+            return total
+        }
+        console.log("sum: " + sumArray([1,2,3]));
+
+        // return sum of all the numbers **forEach**
+        function sumArray2(nums) {
+            var total = 0;
+            nums.forEach(function(element){
+                total = total + element;
+            });
+            return total
+        }
+        console.log("sum: " + sumArray2([1,1,1]));
+
+        // returns the maximum number in the array
+        function max(nums) {
+            var max = nums[0]
+            for(var i = 0; i < nums.length; i++) {
+                if (nums[i] > max) {
+                   var max = nums[i];
+                }
+            }
+            return max;
+        }
+        console.log("max: " + max([1,2,1,21,-33]))
+    </script>
+</body>
+</html>

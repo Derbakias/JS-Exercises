@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <ul>
+        <li>"new" - Add A Todo</li>
+        <li>"list" - View All todos</li>
+        <li>"delete" - Remove a Specific Item</li>
+        <li>"quit" - Quit App</li>
+    </ul>
+    <script>
+        window.setTimeout(function() {
+            var myList = []
+            var question = "";
+            while (question !== "quit") {
+                question = prompt("What would you like to do?");
+                if (question === "new") {
+                    answer = prompt("Add your new item..");
+                    myList.push(answer);
+                }
+                else if (question === "list") {
+                    myList.forEach(function(todo, i){
+                    console.log(i + ": " + todo);
+                });
+                    console.log(myList);
+                }
+                else if (question === "delete") {
+                    var myIndex = prompt("Type the item's index to delete: ");
+                    myList.splice(myIndex, 1);
+                    console.log("Item Deleted!!")
+                }
+            }
+            console.log("You just Quit!!");    
+        }, 500);
+    </script>
+</body>
+</html>
